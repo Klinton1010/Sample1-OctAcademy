@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { PostComponent } from './post/post.component';
+import { PostListComponent } from './post-list/post-list.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PostComponent } from './post/post.component';
     AppComponent,
     NavBarComponent,
     HeaderComponent,
-    PostComponent
+    PostComponent,
+    PostListComponent
 
   ],
   imports: [

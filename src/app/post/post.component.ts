@@ -9,6 +9,11 @@ export class PostComponent implements OnInit {
 
   @Input()
   fromParent!: String;
+
+  fromPost:String="Value from post"
+
+  childMessage:String="from Child Component"
+  
   ngOnInit(): void {
    
   }
