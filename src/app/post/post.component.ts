@@ -16,6 +16,7 @@ export class PostComponent implements OnInit {
 
   outputChildMessage:String="Message from Child via Output"
 
+
   @Output() messageEvent=new EventEmitter<String>();
   
   ngOnInit(): void {
