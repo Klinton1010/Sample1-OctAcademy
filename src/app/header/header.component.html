@@ -1,3 +1,50 @@
 <!--String Interpolation-->
 <h1>{{title}}</h1>
-<h1>{{50+25}}</h1>
+
+<!--Approach 1-->
+<!--<img src="{{imgUrl}}" alt="">-->
+
+<!--Approach 2-->
+<img [src]="imgUrl" alt="">
+
+<!--Class Binding-->
+<h2 [class.text-color]="bool">I going to change color</h2>
+<!--Style Binding-->
+<h1 [style.color]="bool?'red':'' ">This is using Style binding</h1>
+<h1 [style.backgroundColor]="bool?'red':'' ">This is using Style binding</h1>
+
+<!--Event Binding-->
+
+<button (click)="handleEvent()">Event Binding</button> <br>
+
+<!--Event Filtering-->
+<label>Event Filtering-Traditional</label>
+<input type="text" (keyup)="onKeyUp($event)"> <br>
+
+<label>Event Filtering-Mordern</label>
+<input type="text" (keyup.enter)="onKeyUpModern()"><br>
+<br><br>
+
+<!--Getting value of input field-->
+<label>Values of Input-Traditional</label>
+<input type="text" (keyup.enter)="valuesOfInput($event)"> <br><br>
+
+<label>Values of Input-Angular</label>
+<input type="text" (keyup.enter)="valuesOfInputAngular(username)" #username> <br>
+
+
+<!--Two Way databinding-->
+
+<label for="">Two Way Data Binding</label>
+<input type="text" [(ngModel)]="twowayusername" (keyup)="twoWayBinding()">
+username is {{this.twowayusername}}
+
+<br><br>
+<!--Example of one way DataBinding-->
+<label>Example of Oneway Binding</label>
+<input type="text" [value]="onewayBinding" (keyup.enter)="onewaybindingExample()">
+
+<br><br>
+<!--Example of one way DataBinding-->
+<label>Example of Twoway Binding</label>
+<input type="text" [(ngModel)]="twoway" (keyup.enter)="twoWayDataBinding()">

@@ -7,6 +7,7 @@ import { NavBarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { PostComponent } from './post/post.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { PostListComponent } from './post-list/post-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
     
   ],
   providers: [],
