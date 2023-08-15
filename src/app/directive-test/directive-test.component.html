@@ -1,0 +1,22 @@
+<h3>*NgFor</h3>
+<ul>
+    <li *ngFor="let post of  postArray">{{post}}</li>
+</ul>
+
+<h3>*NgFor For Object Render</h3>
+<table>
+    <th>Array Index</th>
+    <th>ID</th>
+    <th>Post</th>
+    <th>Action</th>
+    <tr *ngFor="let post of objArray; let i=index">
+      <td>{{i}}</td>
+      <td>{{post.id}}</td>
+      <td>{{post.postTitle}}</td>
+      <td><button (click)="deleteDate(i)">Delete</button></td>
+    </tr>
+</table>
+<br><br>
+
+<h1>Change Detection</h1>
+<button (click)="addNewObject()">Add New object</button>

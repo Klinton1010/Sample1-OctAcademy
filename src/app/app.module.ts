@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { PostComponent } from './post/post.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { FormsModule } from '@angular/forms';
+import { Task1Component } from './task1/task1.component';
+import { DirectiveTestComponent } from './directive-test/directive-test.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     HeaderComponent,
     PostComponent,
-    PostListComponent
+    PostListComponent,
+    Task1Component,
+    DirectiveTestComponent
 
   ],
   imports: [

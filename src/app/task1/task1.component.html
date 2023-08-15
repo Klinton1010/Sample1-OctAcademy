@@ -1,0 +1,26 @@
+<div class="container">
+<h1>Task 1</h1>
+<input type="text" [(ngModel)]=postTitle placeholder="Post Title"> <br><br>
+
+<textarea rows="12" cols="30" placeholder="Post Content"  [(ngModel)]=postContent></textarea>  <br><br>
+
+<input type="text" placeholder="Post Image Url" [(ngModel)]=postImgUrl> <br><br>
+
+<input type="text" placeholder="Post Url" [(ngModel)]=postLink> <br><br>
+
+<!--<input type="checkbox" (change)=checkBoxValue($event) #checkbox>Add Background-->
+
+<input type="checkbox" [(ngModel)]=isChecked>Add Background
+</div>
+
+<div class="output">
+<h1>Preview Area</h1>
+<!--Class Binding-->
+  <h1 [class.postTitleResult]="isChecked">{{postTitle}}</h1>
+  <!--Interpolation-->
+  <p>{{postContent}}</p>
+  <!--Property Binding-->
+  <img [src]=postImgUrl>
+  <!--Style and Property Binding-->
+  <a [href]=postLink [style.display]="postLink?'block':'none'">Link</a>
+</div>
