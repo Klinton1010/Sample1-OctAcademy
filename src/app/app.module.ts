@@ -10,6 +10,8 @@ import { PostListComponent } from './post-list/post-list.component';
 import { FormsModule } from '@angular/forms';
 import { Task1Component } from './task1/task1.component';
 import { DirectiveTestComponent } from './directive-test/directive-test.component';
+import { Task2Component } from './task2/task2.component';
+import { PipetestComponent } from './pipetest/pipetest.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { DirectiveTestComponent } from './directive-test/directive-test.componen
     PostComponent,
     PostListComponent,
     Task1Component,
-    DirectiveTestComponent
+    DirectiveTestComponent,
+    Task2Component,
+    PipetestComponent
 
   ],
   imports: [
