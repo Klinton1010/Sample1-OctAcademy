@@ -21,3 +21,25 @@
 <h3>{{today}}</h3>  <!--Mon Aug 21 2023 00:54:17 GMT+0530 (India Standard Time)-->
 <h3>{{today|date}}</h3> <!--Aug 21, 2023-->
 <h3>{{today|date: 'short'}}</h3> <!--8/21/23, 12:54 AM-->
+
+<h1>JSON PIPE</h1>
+<h3>{{postObj}}</h3>  <!--[object Object]-->
+<h3>{{postObj|json}}</h3><!--{ "id": 1, "postTitle": "test1" }-->
+
+
+<h1>Percent Pipe</h1>
+<h3>{{0.562|percent}}</h3> <!--56%-->
+<h3>{{5|percent}}</h3>  <!--500-->
+<h3>{{5|percent:'1.2-3'}}</h3>  <!--500.00%-->
+
+<h1>Slice</h1>
+<h3>{{postArray}}</h3>     <!-- Post 1,Post 2,Post 3-->
+<h3>{{postArray |slice :0:2}}</h3><!-- Post 1,Post 2,-->
+<h3>{{postArray |slice :1:6}}</h3><!-- Post 2,Post 3-->
+
+<h1>Custom Pipes</h1>
+<h3>{{userdetails.city|append}}</h3>
+
+
+<h5>{{dummyText|summary:40:true}}</h5>
+<!--Prefix city with city name-->

@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let post of posts">{{post.postTitle}}</li>
+</ul>
+<ul>
+    <li *ngFor="let data of datas">{{data.DataTitle}}</li>
+  </ul>
+
+<button (click)="addNewPost()">Add Post</button>

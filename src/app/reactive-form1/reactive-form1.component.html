@@ -1,0 +1,48 @@
+<div class="container mt-5">
+  <form [formGroup]="signInForm" (ngSubmit)="submitSignIn()">
+    <div>
+      <label>Username</label>
+      <input
+        type="text"
+        placeholder="UserName"
+        class="form-control"
+        name="fullName"
+        formControlName="username"
+      />
+    </div>
+    <div
+      class="alert alert-danger"
+      *ngIf="controlDetails.username.touched && controlDetails.username.invalid"
+    >
+      <div *ngIf="controlDetails.username.errors?.['required']">
+        Username is required
+      </div>
+      <div *ngIf="controlDetails.username.errors?.['noSpaceValidation']">
+        Username should not contain any space
+      </div>
+    </div>
+
+    <div>
+      <label>Password</label>
+      <input
+        type="text"
+        placeholder="Password"
+        class="form-control"
+        name="Password"
+        formControlName="password"
+      />
+    </div>
+    <div
+      class="alert alert-danger"
+      *ngIf="controlDetails.password.touched && controlDetails.password.invalid"
+    >
+      <div *ngIf="controlDetails.password.errors?.['required']">
+        Password required
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary"[disabled]="signInForm.invalid" >Submit</button>
+  </form>
+
+  <h1>Result:</h1>
+  <h3>{{ data | json }}</h3>
+</div>
